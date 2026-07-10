@@ -1,0 +1,19 @@
+{
+  "name": "mern-starter",
+  "version": "1.0.0",
+  "description": "Production-ready MERN Starter Kit",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "tree": "node scripts/tree.js",
+    "client": "npm --prefix client run dev",
+    "server": "npm --prefix server run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "client:install": "npm --prefix client install",
+    "server:install": "npm --prefix server install",
+    "install:all": "npm install && npm run client:install && npm run server:install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.3"
+  }
+}
